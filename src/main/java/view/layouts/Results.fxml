@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane GridPane.halignment="CENTER" GridPane.valignment="CENTER" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+</columnConstraints>
+<rowConstraints>
+    <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="40.0" percentHeight="90.0" vgrow="SOMETIMES" />
+</rowConstraints>
+<children>
+    <Pane id="actionBarBG" GridPane.rowIndex="0" />
+    <GridPane id="actionBar" GridPane.rowIndex="0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="50" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="50" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="60" prefWidth="250" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="250" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="300" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="500" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="200" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="80" prefWidth="80" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="50" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="50" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="0" percentHeight="100" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label id="selectedCount" styleClass="body" GridPane.halignment="LEFT" GridPane.valignment="CENTER" GridPane.columnIndex="2"/>
+            <Button id="clearSelectionButton" text="Clear Selection" GridPane.halignment="LEFT" GridPane.valignment="CENTER" GridPane.columnIndex="3"/>
+            <Label text="Bulk Action:" styleClass="body" GridPane.columnIndex="5" GridPane.valignment="CENTER" GridPane.halignment="RIGHT"/>
+            <ComboBox id="actionMenu" minWidth="150" prefWidth="150" GridPane.columnIndex="6" GridPane.valignment="CENTER" GridPane.halignment="CENTER"/>
+            <Button id="actionApplyButton" text="Apply" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" GridPane.columnIndex="7"/>
+        </children>
+    </GridPane>
+
+    <ScrollPane id="resultsScrollWindow" GridPane.rowIndex="1">
+        <content>
+            <GridPane id="resultsParentGridPane">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="35" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="1750" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="50" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="50" prefWidth="35" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                </rowConstraints>
+                <children>
+                    <!-- Dynamically generated gridpane goes here -->
+                    <Button id="loadMoreButton" text="Load more results" GridPane.columnIndex="1" GridPane.valignment="CENTER" GridPane.halignment="LEFT">
+                        <GridPane.margin>
+                            <Insets top="50" bottom="50"/>
+                        </GridPane.margin>
+                    </Button>
+                </children>
+            </GridPane>
+        </content>
+    </ScrollPane>
+
+</children>
+</GridPane>
